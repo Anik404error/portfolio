@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mujibur Rahman Chowdhury – Portfolio</title>
+<meta name="description" content="Portfolio of Mujibur Rahman Chowdhury, Computer Science student in Dhaka working on web development, machine learning and information systems.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#F2F5F4;--surface:#FFFFFF;--ink:#0F2A33;--muted:#4D6670;--line:#CBD8DA;--accent:#0B7A75;--hot:#C8560F;--onaccent:#FFFFFF}
+@media (prefers-color-scheme:dark){:root{--bg:#0A1C24;--surface:#102A35;--ink:#EAF3F2;--muted:#9DB5BA;--line:#23424F;--accent:#4FD1C5;--hot:#F4A259;--onaccent:#06222A}}
+html{scroll-behavior:smooth}
+,::before,::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:500;gap:14px;flex-wrap:wrap}
+nav .links{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.hero{padding:44px 0 70px;position:relative}
+.hero h1{font-size:clamp(3rem,11vw,7.2rem);font-weight:800;letter-spacing:-.035em}
+.hero h1 span{display:block;color:var(--accent)}
+.role{font-size:clamp(1.1rem,2.6vw,1.5rem);margin:26px 0 8px;max-width:30ch;font-family:"Bricolage Grotesque",sans-serif;font-weight:500}
+.sub{color:var(--muted);max-width:56ch;margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
+.btn.p{background:var(--accent);color:var(--onaccent)}
+.btn:hover{transform:translateY(-2px)}
+.pulse{position:absolute;right:0;top:30px;width:clamp(120px,22vw,210px);aspect-ratio:1;border-radius:50%;border:3px solid var(--accent);object-fit:cover;object-position:50% 20%;background:#fff;animation:ring 3s ease-out 1}
+@keyframes ring{from{box-shadow:0 0 0 0 var(--accent)}to{box-shadow:0 0 0 40px transparent}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}html{scroll-behavior:auto}.btn:hover{transform:none}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:26px;letter-spacing:-.02em}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:34px}
+@media (max-width:720px){.about{grid-template-columns:1fr}.pulse{position:static;display:block;width:112px;margin:0 0 20px}}
+.facts{margin:0;padding:0;list-style:none;border-left:3px solid var(--hot);padding-left:18px}
+.facts li{margin-bottom:12px}.facts b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px}
+.chip{font:inherit;font-size:.95rem;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
+.hint{color:var(--muted);font-size:.95rem;margin:-8px 0 20px}
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px 34px}
+.skillgrid h3{font-size:1.15rem;margin-bottom:8px}.skillgrid p{margin:0;color:var(--muted)}
+.proj{display:grid;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;transition:opacity .25s,border-color .25s}
+.card.dim{opacity:.35}.card.hit{border-color:var(--accent);border-width:2px}
+.card h3{font-size:1.6rem;margin-bottom:8px}
+.card p{margin:0 0 14px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.85rem;padding:3px 11px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{position:relative;padding:0 0 28px 30px;border-left:2px solid var(--line);margin-left:6px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.timeline b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem}
+.timeline small{display:block;color:var(--muted)}
+.pub{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.pub .card{border-left:6px solid var(--hot)}
+.pub h3{font-size:1.25rem}
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.2rem,7vw,4.4rem)}
+.contact .btns{justify-content:center}
+footer{padding:30px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main">
+<strong>MRC</strong>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#contact">Contact</a></div>
+</nav>
+<header class="hero">
+<img class="pulse" src="photo.jpg" alt="Portrait of Mujibur Rahman Chowdhury" width="231" height="254">
+<h1>Mujibur Rahman <span>Chowdhury</span></h1>
+<p class="role">Computer Science student building secure web apps and learning from data.</p>
+<p class="sub">Based in Dhaka, Bangladesh. I work with PHP, MySQL, C#, Java and Python, and I’m focused on machine learning and information systems.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</header>
+<section id="about">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I’m a skill-oriented undergraduate studying Computer Science and Engineering at American International University-Bangladesh. I build responsive, secure applications and enjoy solving problems as part of a team.</p>
+<p>My projects cover e-commerce, social and healthcare domains. Alongside coursework, I’m writing research papers, with one already accepted.</p>
+</div>
+<ul class="facts">
+<li><b>BSc in CSE, 2022 – present</b>Major in Information Systems</li>
+<li><b>Minor in Software Engineering</b>Software quality assurance and testing</li>
+<li><b>English fluent, Bangla native</b></li>
+</ul>
+</div>
+</section>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skillgrid">
+<div><h3>Programming</h3><p>C++, C#, Java, Python, JavaScript, PHP</p></div>
+<div><h3>Web and databases</h3><p>HTML, CSS, MySQL, MongoDB</p></div>
+<div><h3>Data science and AI</h3><p>Machine learning, data analysis, data preprocessing, basic statistics</p></div>
+<div><h3>Tools</h3><p>.NET Framework, GitHub, Codeblocks, KStudio</p></div>
+<div><h3>Working with people</h3><p>Leadership, teamwork, presentation, event and project management, volunteer coordination</p></div>
+</div>
+</section>
+<section id="projects">
+<h2>Projects</h2>
+<p class="hint">Tap a technology to see which projects use it.</p>
+<div class="chips" id="chips" role="group" aria-label="Filter projects by technology"></div>
+<div class="proj">
+<article class="card" data-t="PHP,MySQL,HTML,CSS,JavaScript">
+<h3>Online Quiz App</h3>
+<p>A web quiz application running on a local Apache (XAMPP) server with a MySQL database behind it.</p>
+<div class="tags"><span>PHP</span><span>MySQL</span><span>MySQLi</span><span>Apache (XAMPP)</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+</article>
+<article class="card" data-t="PHP,MySQL,HTML,CSS">
+<h3>Law Shield</h3>
+<p>A legal-services application that combines a PHP web side with a Windows Forms desktop interface and a MySQL database.</p>
+<div class="tags"><span>PHP</span><span>HTML</span><span>CSS</span><span>MySQL</span><span>Windows Forms</span></div>
+</article>
+</div>
+</section>
+<section id="research">
+<h2>Research</h2>
+<div class="pub">
+<article class="card"><h3>Accepted</h3><p>Research paper accepted at NISDG-2026, hosted by Metropolitan University Sylhet.</p></article>
+<article class="card"><h3>Under review</h3><p>Two research papers currently under review at ICCIT 2026.</p></article>
+</div>
+</section>
+<section id="education">
+<h2>Education</h2>
+<ul class="timeline">
+<li><b>American International University-Bangladesh</b><small>BSc in Computer Science and Engineering · 2022 – present</small></li>
+<li><b>Uttara High School and College</b><small>Higher Secondary Certificate, Science · 2019 – 2021</small></li>
+<li><b>Uttara High School and College</b><small>Secondary School Certificate, Science · 2014 – 2019</small></li>
+</ul>
+</section>
+<section id="contact" class="contact">
+<h2>Let’s work together</h2>
+<p class="sub" style="margin-inline:auto">Open to internships, research collaboration and junior developer roles.</p>
+<div class="btns">
+<a class="btn p" href="mailto:m.r.chowdhury158@gmail.com">Email me</a>
+<a class="btn" href="https://github.com/anik404error">View GitHub</a>
+<a class="btn" href="tel:+8801874631891">Call +880 1874 631891</a>
+</div>
+</section>
+<footer>© Mujibur Rahman Chowdhury</footer>
+</div>
+<script>
+(function(){
+var cards=[].slice.call(document.querySelectorAll('.card[data-t]'));
+var set={};cards.forEach(function(c){c.dataset.t.split(',').forEach(function(t){set[t]=1})});
+var box=document.getElementById('chips'),active=null;
+Object.keys(set).forEach(function(t){
+var b=document.createElement('button');b.className='chip';b.type='button';b.textContent=t;b.setAttribute('aria-pressed','false');
+b.onclick=function(){
+active=active===t?null:t;
+[].forEach.call(box.children,function(x){x.setAttribute('aria-pressed',String(x.textContent===active))});
+cards.forEach(function(c){var m=active&&c.dataset.t.split(',').indexOf(active)>-1;
+c.classList.toggle('hit',!!m);c.classList.toggle('dim',!!active&&!m)});
+};
+box.appendChild(b);
+});
+})();
+</script>
+</body>
+</html>
